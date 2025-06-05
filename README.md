@@ -1,6 +1,59 @@
-# 🎮 Chess AI Strategy & Simulation Toolkit
+# ♟️ Chess AI Strategy & Simulation Toolkit
 
 A sophisticated chess analysis platform combining Monte Carlo methods, Game Theory, and advanced visualization techniques for deep strategic insights.
+
+## 📖 Chess Notation Guide
+
+### Algebraic Notation
+- **Pieces**: K (King), Q (Queen), R (Rook), B (Bishop), N (Knight), P/no letter (Pawn)
+- **Files**: a through h (from White's left to right)
+- **Ranks**: 1 through 8 (from White's bottom to Black's top)
+- **Captures**: x (e.g., Bxe4 = Bishop captures on e4)
+- **Castling**: O-O (Kingside), O-O-O (Queenside)
+- **Check**: + (e.g., Qh6+)
+- **Checkmate**: # (e.g., Qh7#)
+- **Examples**:
+  - e4 (Pawn to e4)
+  - Nf3 (Knight to f3)
+  - exd5 (Pawn on e-file captures on d5)
+  - Rad1 (Rook on a-file moves to d1)
+
+### FEN (Forsyth–Edwards Notation)
+Example: `rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1`
+
+Components:
+1. **Piece Placement**: r=rook, n=knight, b=bishop, q=queen, k=king, p=pawn
+   - Uppercase = White pieces
+   - Lowercase = Black pieces
+   - Numbers = Empty squares
+2. **Active Color**: w/b (White/Black to move)
+3. **Castling Rights**: K=White kingside, Q=White queenside, k=Black kingside, q=Black queenside
+4. **En Passant Target**: Square behind pawn that just moved two squares
+5. **Halfmove Clock**: Moves since last pawn move/capture
+6. **Fullmove Number**: Complete moves played
+
+### Common Position Types Used
+1. **Initial Position**: 
+   ```
+   rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+   ```
+
+2. **Sicilian Dragon**:
+   ```
+   rnbqk2r/pp2ppbp/3p1np1/8/3NP3/2N1B3/PPP2PPP/R2QKB1R w KQkq - 0 1
+   ```
+   Key features:
+   - Fianchettoed bishop on g7
+   - Dragon pawn structure
+   - Control of d5
+
+3. **Queen's Gambit Position**:
+   ```
+   rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2
+   ```
+   Key features:
+   - Central pawn tension
+   - Early d4-d5 confrontation
 
 ## 🌟 Key Features
 
